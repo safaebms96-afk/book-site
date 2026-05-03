@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The $1,000,000 Riddle Challenge</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#050505,#111);
+color:white;
+}
+
+.container{
+max-width:1000px;
+margin:auto;
+padding:40px;
+text-align:center;
+}
+
+h1{
+font-size:44px;
+margin-bottom:10px;
+}
+
+.sub{
+color:#aaa;
+margin-bottom:20px;
+}
+
+.cover{
+width:280px;
+border-radius:15px;
+box-shadow:0 0 40px rgba(255,215,0,0.3);
+margin:20px auto;
+display:block;
+}
+
+.price{
+font-size:26px;
+color:gold;
+margin:10px 0;
+font-weight:bold;
+}
+
+.timer{
+font-size:22px;
+color:gold;
+margin:15px 0;
+}
+
+button{
+padding:16px 30px;
+font-size:18px;
+background:gold;
+border:none;
+border-radius:12px;
+cursor:pointer;
+font-weight:bold;
+color:black;
+transition:0.3s;
+margin-top:10px;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+.card{
+background:#1a1a1a;
+padding:20px;
+margin-top:25px;
+border-radius:15px;
+text-align:left;
+border:1px solid gold;
+}
+
+h2{
+color:gold;
+}
+
+ul{
+color:#ddd;
+line-height:1.8;
+}
+.wallet{
+background:#000;
+padding:12px;
+border-radius:10px;
+border:1px solid gold;
+word-break:break-all;
+margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📘 The $1,000,000 Riddle Challenge</h1>
+<p class="sub">Only 100 winners will be selected worldwide</p>
+
+<img src="cover.jpg" class="cover">
+
+<div class="price">💰 Price: $1100</div>
+
+<div class="timer" id="timer"></div>
+
+<script>
+const endDate = new Date("December 31, 2026 23:59:59").getTime();
+
+setInterval(()=>{
+let now = new Date().getTime();
+let distance = endDate - now;
+
+let days = Math.floor(distance/(1000*60*60*24));
+let hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+let minutes = Math.floor((distance%(1000*60*60))/(1000*60));
+let seconds = Math.floor((distance%(1000*60))/1000);
+
+document.getElementById("timer").innerHTML =
+"⏳ Ends in: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+},1000);
+</script>
+
+<a href="payment.html">
+<button>🚀 Buy Access Now</button>
+</a>
+
+<!-- CONDITIONS -->
+<div class="card">
+
+<h2>📜 RIDDLE CONDITIONS</h2>
+
+<ul>
+<li>The prize will be sent via Binance wallet only.</li>
+<li>The competition ends on December 31.</li>
+<li>On December 31, prizes will be delivered to the first 100 winners.</li>
+<li>The winner will be notified via email if the answer is correct.</li>
+<li>The winner must record a video and send it as proof of authenticity.</li>
+<li>Please take a screenshot when finding the correct riddle. Any unrelated questions will not be accepted.</li>
+<li>The answer must include a full explanation. This is mandatory.</li>
+<li>The prize is up to <b>$1,000,000</b> for 100 winners.</li>
+</ul>
+
+</div>
+
+<!-- PAYMENT INFO -->
+<div class="card">
+
+<h2>💳 Payment Wallets (TRC20)</h2>
+
+<p>Trust Wallet:</p>
+<div class="wallet">
+TW4QQsBPAcQYNDqyWq7VmGrQ12WjPhNLeX
+</div>
+
+<p>Binance:</p>
+<div class="wallet">
+TJYBJZ8bHbobvv7x8RAp76VtDQNP9Z5emg
+</div>
+
+</div>
+
+<!-- SCREENSHOT UPLOAD -->
+<div class="card">
+
+<h2>📩 Submit Payment Proof</h2>
+
+<p>Upload your screenshot for verification (sent directly to email)</p>
+
+<form action="https://formsubmit.co/Lalameryem26@gmail.com" method="POST" enctype="multipart/form-data">
+
+<input type="email" name="email" placeholder="Your Email" required><br><br>
+
+<input type="text" name="txid" placeholder="TXID (Transaction ID)" required><br><br>
+
+<input type="file" name="screenshot" required><br><br>
+
+<input type="hidden" name="_subject" value="New Riddle Challenge Purchase">
+
+<button type="submit">✔ Submit Verification</button>
+
+</form>
+
+</div>
+
+</div>
+
+</body>
+</html>
