@@ -1,53 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Million Dollar Challenge</title>
+<title>The $1,000,000 Riddle</title>
 
 <style>
 body{
 margin:0;
 font-family:Arial;
-background:#0b0b0b;
+background:linear-gradient(135deg,#050505,#111);
 color:white;
 text-align:center;
 }
 
 .container{
-max-width:900px;
+max-width:1000px;
 margin:auto;
 padding:40px;
 }
 
-h1{font-size:40px;}
-
-.cover{
-width:220px;
-border-radius:12px;
-margin:20px;
-box-shadow:0 0 25px #00c85355;
+h1{
+font-size:42px;
+margin-bottom:10px;
 }
 
-button{
-padding:15px 28px;
-background:#00c853;
-border:none;
-border-radius:10px;
-font-size:18px;
-cursor:pointer;
-font-weight:bold;
-}
-
-.box{
-background:#1a1a1a;
-padding:20px;
-margin-top:30px;
-border-radius:10px;
+.sub{
+color:#aaa;
+margin-bottom:20px;
 }
 
 .timer{
 font-size:22px;
 color:#ff5252;
+margin:20px 0;
+}
+
+.cover{
+width:260px;
+border-radius:15px;
+box-shadow:0 0 30px rgba(0,255,120,0.3);
+margin:20px auto;
+display:block;
+}
+
+button{
+padding:16px 30px;
+font-size:18px;
+background:#00c853;
+border:none;
+border-radius:12px;
+cursor:pointer;
+font-weight:bold;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+.card{
+background:#1a1a1a;
+padding:25px;
+margin-top:30px;
+border-radius:15px;
+text-align:left;
+box-shadow:0 0 15px rgba(0,0,0,0.5);
+}
+
+h2{
+color:#00c853;
+}
+
+ul{
+color:#ccc;
+line-height:1.8;
 }
 </style>
 </head>
@@ -56,36 +82,75 @@ color:#ff5252;
 
 <div class="container">
 
-<h1>📘 $1,000,000 Hidden Challenge</h1>
-
-<img src="cover.jpg" class="cover">
-
-<p>Only a few people will understand the hidden riddle inside this book.</p>
+<h1>📘 The $1,000,000 Hidden Riddle</h1>
+<p class="sub">Only a few will truly understand what is hidden inside.</p>
 
 <div class="timer" id="timer"></div>
 
 <script>
-// TIMER
-let time = 3600 * 5;
+const endDate = new Date("December 31, 2026 23:59:59").getTime();
+
 setInterval(()=>{
-let h = Math.floor(time/3600);
-let m = Math.floor((time%3600)/60);
-let s = time%60;
+let now = new Date().getTime();
+let distance = endDate - now;
+
+let days = Math.floor(distance / (1000*60*60*24));
+let hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+let minutes = Math.floor((distance%(1000*60*60))/(1000*60));
+let seconds = Math.floor((distance%(1000*60))/1000);
+
 document.getElementById("timer").innerHTML =
-"⏳ Offer ends in: " + h + ":" + m + ":" + s;
-time--;
+"⏳ Offer ends in: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+
+if(distance < 0){
+document.getElementById("timer").innerHTML = "EXPIRED";
+}
 },1000);
 </script>
 
-<div class="box">
-<p>🔥 27 people already tried</p>
-<p>❌ 26 failed</p>
-<p>⚡ Only few understood it</p>
-</div>
+<img src="cover.jpg" class="cover" alt="Book Cover">
+
+<p>
+Inside this book… there is a hidden riddle.<br>
+Solve it, and you could win up to <b>$1,000,000</b>.
+</p>
 
 <a href="payment.html">
-<button>👉 Get Access ($1100)</button>
+<button>🚀 Get Access Now</button>
 </a>
+
+<!-- CONDITIONS -->
+<div class="card">
+<h2>📜 Challenge Rules</h2>
+<ul>
+<li>The riddle is hidden inside the book</li>
+<li>You must provide a full explanation of your answer</li>
+<li>Only correct answers are accepted</li>
+<li>Each user has one attempt only</li>
+<li>Access is limited and non-refundable</li>
+</ul>
+</div>
+
+<!-- WIN CONDITIONS -->
+<div class="card">
+<h2>🏆 Winning Conditions</h2>
+<ul>
+<li>The answer must be exact and clearly explained</li>
+<li>The solution must be original (no copying)</li>
+<li>The winner will be contacted via email</li>
+<li>The prize can reach up to $1,000,000</li>
+</ul>
+</div>
+
+<!-- SOCIAL PROOF -->
+<div class="card">
+<h2>🔥 Activity</h2>
+<ul>
+<li>27 people already tried</li>
+<li>26 failed</li>
+<li>Only 1 got close</li>
+</ul>
+</div>
 
 </div>
 
