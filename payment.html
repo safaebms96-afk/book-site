@@ -2,28 +2,39 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Secure Checkout</title>
+<title>Premium Checkout</title>
 
 <style>
 body{
 margin:0;
 font-family:Arial;
-background:#0b0b0b;
+background:linear-gradient(135deg,#050505,#111);
 color:white;
 text-align:center;
 }
 
 .container{
-max-width:700px;
+max-width:850px;
 margin:auto;
 padding:40px;
+}
+
+h1{
+font-size:38px;
+margin-bottom:10px;
+}
+
+.sub{
+color:#aaa;
+margin-bottom:30px;
 }
 
 .card{
 background:#1a1a1a;
 padding:20px;
-border-radius:12px;
-margin-top:20px;
+margin:15px 0;
+border-radius:15px;
+box-shadow:0 0 20px rgba(0,255,120,0.1);
 }
 
 .wallet{
@@ -32,28 +43,32 @@ padding:15px;
 border-radius:10px;
 border:1px solid #00c853;
 word-break:break-all;
-}
-
-input,button{
-width:100%;
-padding:12px;
 margin-top:10px;
-border-radius:8px;
-border:none;
-font-size:16px;
 }
 
 button{
+width:100%;
+padding:15px;
+margin-top:15px;
+font-size:18px;
+font-weight:bold;
+border:none;
+border-radius:10px;
+cursor:pointer;
 background:#00c853;
 color:white;
-font-weight:bold;
-cursor:pointer;
 }
 
 .warning{
 color:#ff5252;
-font-size:14px;
+font-size:13px;
 margin-top:10px;
+}
+
+.timer{
+font-size:20px;
+color:#ff5252;
+margin-bottom:20px;
 }
 </style>
 </head>
@@ -62,55 +77,80 @@ margin-top:10px;
 
 <div class="container">
 
-<h1>💳 Secure Checkout</h1>
+<h1>💎 Premium Access Checkout</h1>
+<p class="sub">Secure payment system for The $1,000,000 Challenge</p>
 
-<p>Complete your payment to access the book</p>
+<div class="timer" id="timer"></div>
 
+<script>
+const endDate = new Date("December 31, 2026 23:59:59").getTime();
+
+setInterval(()=>{
+let now = new Date().getTime();
+let distance = endDate - now;
+
+let days = Math.floor(distance / (1000*60*60*24));
+let hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+let minutes = Math.floor((distance%(1000*60*60))/(1000*60));
+let seconds = Math.floor((distance%(1000*60))/1000);
+
+document.getElementById("timer").innerHTML =
+"⏳ Offer ends in: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+
+if(distance < 0){
+document.getElementById("timer").innerHTML = "EXPIRED";
+}
+},1000);
+</script>
+
+<!-- TRC20 WALLET -->
 <div class="card">
 
-<h3>💰 Payment Details</h3>
-
-<p>Send USDT (TRC20) to this address:</p>
+<h2>💰 TRC20 Payment (Trust Wallet)</h2>
 
 <div class="wallet">
-YOUR_WALLET_ADDRESS_HERE
+TW4QQsBPAcQYNDqyWq7VmGrQ12WjPhNLeX
 </div>
 
 <p class="warning">
-⚠️ Only send USDT on TRC20 network<br>
-⚠️ Wrong network = lost funds
+⚠️ Send ONLY USDT on TRC20 network
 </p>
 
 </div>
 
+<!-- BINANCE WALLET -->
 <div class="card">
 
-<h3>📩 Confirm Payment</h3>
+<h2>🏦 Binance Payment (TRC20)</h2>
+
+<div class="wallet">
+TJYBJZ8bHbobvv7x8RAp76VtDQNP9Z5emg
+</div>
+
+<p class="warning">
+⚠️ Use correct network (TRC20 only)
+</p>
+
+</div>
+
+<!-- CONFIRM -->
+<div class="card">
+
+<h2>📩 Confirm Payment</h2>
 
 <form action="https://formsubmit.co/Lalameryem26@gmail.com" method="POST" enctype="multipart/form-data">
 
-<input type="email" name="email" placeholder="Your Email" required>
+<input type="email" name="email" placeholder="Your Email" required style="width:100%;padding:12px;margin-top:10px;border-radius:8px;"><br>
 
-<input type="text" name="txid" placeholder="TXID (Transaction ID)" required>
+<input type="text" name="txid" placeholder="Transaction ID (TXID)" required style="width:100%;padding:12px;margin-top:10px;border-radius:8px;"><br>
 
-<input type="file" name="screenshot" required>
+<input type="file" name="screenshot" required style="margin-top:10px;"><br>
 
-<input type="hidden" name="_subject" value="New Book Purchase - Payment Proof">
+<input type="hidden" name="_subject" value="New Premium Purchase">
 
-<button type="submit">Confirm Payment</button>
+<button type="submit">🚀 Confirm Payment</button>
 
 </form>
-
-</div>
-
-<div class="card">
-
-<h3>🛡 Security Notice</h3>
-<p>
-Payments are manually verified.<br>
-Access is sent only after confirmation.<br>
-No refunds after verification.
-</p>
 
 </div>
 
