@@ -2,199 +2,140 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>The Mystery Book</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Where Is the Billion Hiding</title>
 
 <style>
-body{
-margin:0;
-font-family:Arial;
-background:radial-gradient(circle,#0f0f0f,#000);
-color:white;
-text-align:center;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b0f1a;
+    color: white;
 }
 
-.container{
-max-width:900px;
-margin:auto;
-padding:30px;
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #111827, #1f2937);
 }
 
-.book-cover{
-width:100%;
-max-width:380px;
-border-radius:20px;
-box-shadow:0 20px 60px rgba(0,0,0,0.8);
-margin-bottom:25px;
-transition:0.4s;
-}
-.book-cover:hover{
-transform:scale(1.05);
+header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
 }
 
-.title{
-font-size:34px;
-font-weight:bold;
-color:#f0b90b;
+header p {
+    font-size: 18px;
+    color: #cbd5e1;
 }
 
-.subtitle{
-opacity:0.8;
-margin-bottom:25px;
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background: #facc15;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 18px;
 }
 
-.card{
-background:rgba(255,255,255,0.05);
-padding:25px;
-margin:20px 0;
-border-radius:20px;
-border:1px solid rgba(255,255,255,0.08);
-backdrop-filter:blur(10px);
+section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: auto;
 }
 
-.address{
-color:#f0b90b;
-word-break:break-all;
-margin:10px 0;
+h2 {
+    color: #facc15;
 }
 
-.warning{
-color:#ff4d4d;
-font-weight:bold;
-margin-top:15px;
+.card {
+    background: #111827;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 12px;
 }
 
-/* زر شراء فخم */
-.buy-btn{
-padding:15px 30px;
-font-size:18px;
-font-weight:bold;
-border:none;
-border-radius:12px;
-cursor:pointer;
-color:white;
-background:linear-gradient(90deg,#ff9800,#ff5722);
-box-shadow:0 0 20px rgba(255,140,0,0.6);
-transition:0.3s;
-margin:20px 0;
-}
-.buy-btn:hover{
-transform:scale(1.08);
-box-shadow:0 0 35px rgba(255,140,0,1);
+.highlight {
+    color: #22c55e;
+    font-weight: bold;
 }
 
-/* زر ارسال */
-button{
-padding:12px 18px;
-background:linear-gradient(90deg,#00c853,#00e676);
-border:none;
-border-radius:10px;
-cursor:pointer;
-font-weight:bold;
-}
-
-input{
-width:85%;
-padding:12px;
-margin:10px;
-border-radius:8px;
-border:none;
-}
-
-.timer{
-font-size:22px;
-color:#f0b90b;
+footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 14px;
+    color: #94a3b8;
 }
 </style>
+
 </head>
 
 <body>
 
-<div class="container">
+<header>
+    <h1>Where Is the Billion Hiding</h1>
+    <p>The Intelligence Puzzle That Could Change Your Life</p>
+    <a href="#buy" class="cta-button">Start the Challenge</a>
+</header>
 
-<!-- الغلاف -->
-<img src="Yellow and Black Bold Money and Victory Wattpad Book Cover (2).png" class="book-cover">
+<section>
+    <h2>💰 Are You Smart Enough to Win $1,000,000?</h2>
+    <p>This is not just a book. It is a hidden intelligence puzzle designed for thinkers who want more from life.</p>
 
-<div class="title">📘 The Mystery Book</div>
-<div class="subtitle">One book. One riddle. One million dollar prize.</div>
+    <div class="card">
+        <p>✔ Hidden logic challenges</p>
+        <p>✔ Pattern-based puzzles</p>
+        <p>✔ A final secret answer worth <span class="highlight">$1,000,000</span></p>
+    </div>
+</section>
 
-<!-- زر شراء -->
-<button class="buy-btn" onclick="scrollToPayment()">🔥 Buy Now</button>
+<section>
+    <h2>📖 What You Will Experience</h2>
 
-<div class="card">
-<h2>⏳ Countdown</h2>
-<div id="timer" class="timer"></div>
-</div>
+    <div class="card">
+        You don’t just read this book…  
+        You solve it.
+    </div>
 
-<div class="card" id="payment">
-<h2>💰 Payment Methods</h2>
+    <div class="card">
+        Every page brings you closer to a hidden final answer.
+    </div>
 
-<p><b>Trust Wallet (USDT TRC20):</b></p>
-<p class="address">TW4QQsBPAcQYNDqyWq7VmGrQ12WjPhNLeX</p>
+    <div class="card">
+        Only those who think differently will reach the end.
+    </div>
+</section>
 
-<p><b>Binance (USDT TRC20):</b></p>
-<p class="address">TJYBJZ8bHbobvv7x8RAp76VtDQNP9Z5emg</p>
+<section>
+    <h2>🔥 Why People Are Talking About It</h2>
 
-<p>⚠️ Send exactly <b>1100 USDT</b> using TRC20 network</p>
+    <div class="card">
+        A unique mix of mystery, intelligence, and opportunity.
+    </div>
 
-<p class="warning">
-❗ Any payment sent on the wrong network or wrong amount will NOT be accepted and cannot be recovered.
-</p>
+    <div class="card">
+        A challenge that feels like a real-life game.
+    </div>
 
-</div>
+    <div class="card">
+        A chance to turn thinking into reward.
+    </div>
+</section>
 
-<div class="card">
-<h2>📩 Submit Proof</h2>
+<section id="buy">
+    <h2>🚀 Start Your Journey Now</h2>
 
-<form action="https://formsubmit.co/Lalameryem26@gmail.com" method="POST" enctype="multipart/form-data">
+    <p>Take the challenge. Test your mind. Discover the hidden answer.</p>
 
-<input type="email" name="email" placeholder="Your Email" required>
-<input type="text" name="txid" placeholder="Transaction ID (TXID)" required>
-<input type="file" name="proof" required>
+    <a href="#" class="cta-button">BUY NOW</a>
+</section>
 
-<br>
-
-<button type="submit">Submit Payment</button>
-
-</form>
-
-</div>
-
-<div class="card">
-<h2>📜 Rules</h2>
-<p style="text-align:left">
-- Prize: $1,000,000<br>
-- Ends: December 31<br>
-- First correct answers win<br>
-- Must include explanation<br>
-- Screenshot required<br>
-- Winners must send video proof
-</p>
-</div>
-
-</div>
-
-<script>
-
-/* سكروول لزر الشراء */
-function scrollToPayment(){
-document.getElementById("payment").scrollIntoView({behavior:"smooth"});
-}
-
-/* تايمر */
-let end = new Date("Dec 31, 2026 23:59:59").getTime();
-
-setInterval(()=>{
-let now = new Date().getTime();
-let d = end - now;
-
-document.getElementById("timer").innerHTML =
-Math.floor(d/(1000*60*60*24))+" days "+
-Math.floor(d%(1000*60*60*24)/(1000*60*60))+" hours "+
-Math.floor(d%(1000*60*60)/(1000*60))+" minutes "+
-Math.floor(d%(1000*60)/1000)+" seconds";
-},1000);
-
-</script>
+<footer>
+    © 2026 Where Is the Billion Hiding. All rights reserved.
+</footer>
 
 </body>
 </html>
