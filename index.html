@@ -1,141 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Where Is the Billion Hiding</title>
+<title>Million Dollar Challenge</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0b0f1a;
-    color: white;
+body{
+margin:0;
+font-family:Arial;
+background:#0b0b0b;
+color:white;
+text-align:center;
 }
 
-header {
-    text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(135deg, #111827, #1f2937);
+.container{
+max-width:900px;
+margin:auto;
+padding:40px;
 }
 
-header h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
+h1{font-size:40px;}
+
+.cover{
+width:220px;
+border-radius:12px;
+margin:20px;
+box-shadow:0 0 25px #00c85355;
 }
 
-header p {
-    font-size: 18px;
-    color: #cbd5e1;
+button{
+padding:15px 28px;
+background:#00c853;
+border:none;
+border-radius:10px;
+font-size:18px;
+cursor:pointer;
+font-weight:bold;
 }
 
-.cta-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 15px 30px;
-    background: #facc15;
-    color: black;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 10px;
-    font-size: 18px;
+.box{
+background:#1a1a1a;
+padding:20px;
+margin-top:30px;
+border-radius:10px;
 }
 
-section {
-    padding: 60px 20px;
-    max-width: 900px;
-    margin: auto;
-}
-
-h2 {
-    color: #facc15;
-}
-
-.card {
-    background: #111827;
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 12px;
-}
-
-.highlight {
-    color: #22c55e;
-    font-weight: bold;
-}
-
-footer {
-    text-align: center;
-    padding: 40px;
-    font-size: 14px;
-    color: #94a3b8;
+.timer{
+font-size:22px;
+color:#ff5252;
 }
 </style>
-
 </head>
 
 <body>
 
-<header>
-    <h1>Where Is the Billion Hiding</h1>
-    <p>The Intelligence Puzzle That Could Change Your Life</p>
-    <a href="#buy" class="cta-button">Start the Challenge</a>
-</header>
+<div class="container">
 
-<section>
-    <h2>💰 Are You Smart Enough to Win $1,000,000?</h2>
-    <p>This is not just a book. It is a hidden intelligence puzzle designed for thinkers who want more from life.</p>
+<h1>📘 $1,000,000 Hidden Challenge</h1>
 
-    <div class="card">
-        <p>✔ Hidden logic challenges</p>
-        <p>✔ Pattern-based puzzles</p>
-        <p>✔ A final secret answer worth <span class="highlight">$1,000,000</span></p>
-    </div>
-</section>
+<img src="cover.jpg" class="cover">
 
-<section>
-    <h2>📖 What You Will Experience</h2>
+<p>Only a few people will understand the hidden riddle inside this book.</p>
 
-    <div class="card">
-        You don’t just read this book…  
-        You solve it.
-    </div>
+<div class="timer" id="timer"></div>
 
-    <div class="card">
-        Every page brings you closer to a hidden final answer.
-    </div>
+<script>
+// TIMER
+let time = 3600 * 5;
+setInterval(()=>{
+let h = Math.floor(time/3600);
+let m = Math.floor((time%3600)/60);
+let s = time%60;
+document.getElementById("timer").innerHTML =
+"⏳ Offer ends in: " + h + ":" + m + ":" + s;
+time--;
+},1000);
+</script>
 
-    <div class="card">
-        Only those who think differently will reach the end.
-    </div>
-</section>
+<div class="box">
+<p>🔥 27 people already tried</p>
+<p>❌ 26 failed</p>
+<p>⚡ Only few understood it</p>
+</div>
 
-<section>
-    <h2>🔥 Why People Are Talking About It</h2>
+<a href="payment.html">
+<button>👉 Get Access ($1100)</button>
+</a>
 
-    <div class="card">
-        A unique mix of mystery, intelligence, and opportunity.
-    </div>
-
-    <div class="card">
-        A challenge that feels like a real-life game.
-    </div>
-
-    <div class="card">
-        A chance to turn thinking into reward.
-    </div>
-</section>
-
-<section id="buy">
-    <h2>🚀 Start Your Journey Now</h2>
-
-    <p>Take the challenge. Test your mind. Discover the hidden answer.</p>
-
-    <a href="#" class="cta-button">BUY NOW</a>
-</section>
-
-<footer>
-    © 2026 Where Is the Billion Hiding. All rights reserved.
-</footer>
+</div>
 
 </body>
 </html>
